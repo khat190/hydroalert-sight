@@ -26,9 +26,9 @@ export function AssetCard({
   onSelect,
 }: {
   asset: Asset;
-  exposed?: boolean;
-  selected?: boolean;
-  onSelect?: (id: string) => void;
+  exposed?: boolean | undefined;
+  selected?: boolean | undefined;
+  onSelect?: ((id: string) => void) | undefined;
 }) {
   const Icon = ASSET_ICON[asset.kind];
   const tone = riskTone(asset.priority);
